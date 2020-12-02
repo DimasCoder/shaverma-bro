@@ -31,7 +31,7 @@ class MenuToggles extends Component {
                     </button>
                     <button type="button" className="btn-toggle" onClick={this.onClick} data-id="Бургер">Бургери
                     </button>
-                    <button type="button" className="btn-toggle" onClick={() => this.props.addToCart(value)}
+                    <button type="button" className="btn-toggle"
                             data-id="Напій">Напої
                     </button>
                 </div>
