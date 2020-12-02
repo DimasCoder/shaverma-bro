@@ -1,6 +1,6 @@
 package dimasblack.shavermabro.controller;
 
-import dimasblack.shavermabro.dao.Shaverma;
+import dimasblack.shavermabro.model.Shaverma;
 import dimasblack.shavermabro.service.ShavermaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

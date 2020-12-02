@@ -1,4 +1,4 @@
-package dimasblack.shavermabro.dao;
+package dimasblack.shavermabro.model;
 
 import javax.persistence.*;
 

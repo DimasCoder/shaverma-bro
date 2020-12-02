@@ -1,6 +1,6 @@
 package dimasblack.shavermabro.service;
 
-import dimasblack.shavermabro.dao.Order;
+import dimasblack.shavermabro.model.Order;
 import dimasblack.shavermabro.repo.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

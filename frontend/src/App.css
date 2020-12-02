@@ -1,0 +1,1191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background: black;
+}
+
+@font-face {
+    font-family: "Hermes";
+    src: url("fonts/Hermes.eot"); /* IE9 Compat Modes */
+    src: url("fonts/Hermes.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/Hermes.otf") format("opentype"), /* Open Type Font */ url("fonts/Hermes.svg") format("svg"), /* Legacy iOS */ url("fonts/Hermes.ttf") format("truetype"), /* Safari, Android, iOS */ url("fonts/Hermes.woff") format("woff"), /* Modern Browsers */ url("fonts/Hermes.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Header*/
+.navbar .navbar .navbar-expand-md .navbar-light {
+    padding: 0;
+}
+
+.navbar-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.nav-col {
+    display: block;
+    width: 40%;
+}
+
+.nav-col-center {
+    display: flex;
+    width: 20%;
+}
+
+.topbar-row-left {
+    min-height: 20%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.topbar-row-right {
+    min-height: 20%;
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.topbar-info {
+    display: flex;
+}
+
+.topbar-info time {
+    font-size: 14px;
+    margin: auto 10px auto 5px;
+}
+
+.topbar-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: auto 10px auto 5px;
+    transition: 0.2s linear;
+}
+
+.topbar-info a:hover {
+    color: rgb(240, 0, 0);
+    text-decoration: none;
+    margin: auto 10px auto 5px;
+}
+
+.topbar-info span {
+    color: rgb(240, 0, 0);
+}
+
+.nav-icon {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(240, 0, 0);
+    border-radius: 50%;
+    padding: 9px;
+    text-align: center;
+    line-height: 0px;
+    vertical-align: middle;
+    transition: .2s linear;
+}
+
+.nav-icon:hover {
+    text-decoration: none;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.nav-icon-inst {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(240, 0, 0);
+    border-radius: 50%;
+    padding: 0.563em 0.625em 0.563em 0.625em;
+    text-align: center;
+    line-height: 0px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: .2s linear;
+}
+
+.nav-icon-inst:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.nav-dropdown-basket {
+    background-color: rgb(240, 0, 0) !important;
+    padding: 4px 20px 4px 20px !important;
+    border-radius: 15px !important;
+    color: #fff;
+}
+
+.nav-dropdown-menu {
+    margin-top: 10px !important;
+    background-color: rgb(24, 24, 24) !important;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+}
+
+.nav-dropdown-header {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 4px 12px 4px 12px !important;
+    border-bottom: 2px solid #000 !important;
+}
+
+.nav-dropdown-header p {
+    color: #738694;
+    font-family: "Hermes", arial;
+    font-size: 14px;
+    height: 8px !important;
+}
+
+.nav-dropdown-item {
+    border-bottom: 2px solid #000 !important;
+    padding: 12px 12px 12px 12px !important;
+    margin: 10px 0;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+    transition: 0.2s linear;
+}
+
+.nav-dropdown-item:hover {
+    transform: scale(1.05);
+    transition: 0.2s linear;
+    background-color: rgb(24, 24, 24) !important;
+
+}
+
+.nav-icon-right:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.mainbar-row-left, .mainbar-row-right {
+    width: 90%;
+    display: flex;
+}
+
+.mainbar-row-right {
+    margin-left: auto;
+}
+
+.collapse-left {
+    padding: 10% 0;
+    display: flex;
+}
+
+.collapse-right {
+    padding: 10% 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-left {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-right {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bro-logo {
+    width: 84%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+}
+
+.div-basket-md {
+    display: none;
+}
+
+.div-basket-responsive {
+    background-color: rgb(240, 0, 0);
+    display: none;
+}
+
+.header-nav-link {
+    text-decoration: none;
+    color: #fff !important;
+    font-family: 'Hermes', arial;
+    font-size: calc(12px + 1.1vw);
+    -webkit-text-stroke: 1px #000;
+
+}
+
+
+.header-nav-link:hover {
+    text-decoration: none;
+    color: rgb(240, 0, 0) !important;
+}
+
+.div-cart {
+    cursor: pointer;
+    display: flex;
+}
+
+
+.div-phone p {
+    font-weight: 600;
+    font-size: 14px;
+    margin: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+
+.div-cart span {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+.navbar-hamburger {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/*Intro*/
+.container-intro {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0;
+}
+
+.intro-text {
+    width: 50%;
+
+}
+
+.intro-text h3 {
+    padding: 10% 0;
+    color: #fff;
+    font-weight: 900;
+    font-size: 5vw;
+    -webkit-text-stroke: 2px #000;
+}
+
+.intro-text span {
+    color: red;
+    -webkit-text-stroke: 2px #000000;
+    text-shadow: 0 0 20px #000,
+    0 0 35px #000,
+    0 0 40px #000,
+    0 0 60px #000,
+    0 0 90px #000
+}
+
+.intro-image {
+    display: flex;
+    margin: auto;
+    width: 40%;
+}
+
+.bro-img {
+    width: 100%;
+    height: auto;
+
+}
+
+/*Food*/
+
+.toggles {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.btn-toggle{
+    outline: none;
+    font-family: "Hermes";
+    display: inline;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+    transition: 0.2s linear;
+    text-decoration: none;
+
+}
+
+.btn-toggle:focus {
+    outline: none;
+}
+
+.btn-toggle:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background: red;
+    transition: linear .2s;
+}
+
+
+
+.btn-toggle:hover {
+    color: red;
+    transition: 0.2s linear;
+    text-decoration: none;
+
+}
+
+.btn-toggle:hover:after {
+    width: 100%;
+    transition: linear .2s;
+}
+
+.active{
+    color: red;
+}
+
+
+
+
+.food-category {
+    padding-top: 50px;
+}
+
+.food-card {
+    width: 30%;
+    background-color: rgba(83, 83, 83, 0.05);
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 20px 5px 10px 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: linear 0.2s;
+}
+
+.food-card:hover {
+    transform: scale(1.05);
+    transition: linear 0.2s;
+    border: 2px solid red;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.product-img-div {
+    width: 100%;
+}
+
+.toggler-bar {
+    color: #fff;
+}
+
+.product-img {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    transition: linear 0.2s;
+}
+
+.food-card-body {
+    padding: 10px 20px 10px 20px;
+    display: block;
+}
+
+.food-card-body h3{
+    font-size: 2vw;
+}
+
+.radio-buttons {
+    display: block;
+}
+
+.food-card-body span {
+    color: red;
+}
+
+.btn-radio span {
+    color: #fff;
+    margin: 0 5px auto 5px;
+    font-size: 1.2vw;
+}
+
+
+label > input[type="radio"] {
+    display: none;
+}
+
+label > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: -3px;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+    padding-top: 10px;
+}
+
+label > input[type="radio"]:checked + *::before {
+    background: radial-gradient(red 0%, red 40%, transparent 50%, transparent);
+    border-color: red;
+}
+
+label > input[type="radio"]:checked + * {
+    color: red;
+}
+
+input[type=radio]:checked ~ span {
+    color: red;
+}
+
+.food-card-body h3 {
+    color: #fff;
+    font-family: "Hermes", arial;
+    margin-bottom: 0;
+}
+
+
+.food-card-body p {
+    color: #738694;
+    font-family: "Hermes", arial;
+    margin-bottom: 0;
+    font-size: 1.05vw;
+}
+
+.food-card-body strong {
+    color: red;
+    font-family: "Hermes", arial;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.food-card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.food-counter{
+    margin: auto 0;
+}
+
+.btn-number{
+    background-color: rgba(0,0,0,0);
+    border-bottom: 2px solid red;
+    border-top: 2px solid red;
+    border-right: none !important;
+    border-left: none !important;
+    color: #fff;
+    width: 40px;
+    text-align: center;
+}
+
+.btn-number:focus{
+    outline: none;
+}
+
+.btn-wanted{
+    font-family: "Hermes", arial;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0);
+    margin: auto 0;
+    border-radius: 50%;
+    border: 2px solid red;
+    transition: 0.2s linear;
+    padding: 4px 8px;
+}
+
+.btn-wanted:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #A60000;
+    margin: auto 0;
+    border-radius: 50%;
+    border: 2px solid red;
+    transition: 0.2s linear;
+    padding: 4px 8px;
+    transform: scale(1.15);
+}
+
+.btn-wanted:focus{
+    outline: none;
+}
+
+.btn-wanted:active{
+    background-color: red;
+}
+
+.btn-minus {
+    width: 30px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 15px 0 0 15px;
+    outline: none !important;
+    border: 2px solid red !important;
+    color: red;
+
+}
+
+.btn-minus:active{
+    background-color: red;
+    transition: 0.1s linear;
+}
+
+.btn-plus {
+    width: 30px !important;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0 15px 15px 0 !important;
+    outline: none !important;
+    border: 2px solid red !important;
+    color: red;
+    transition: 0.1s linear;
+
+}
+
+.btn-plus:active{
+    background-color: red;
+    transition: 0.1s linear;
+}
+
+.menu {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.line {
+    width: 80%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: red;
+}
+
+/*Reviews*/
+
+.reviewList {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 0 !important;
+}
+
+.reviews-text h4 {
+    padding-right: 40px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.reviews-text span {
+    color: rgb(240, 0, 0) !important;
+}
+
+.reviews-text p {
+    color: #738694;
+    font-size: 14px;
+    font-weight: 900;
+    padding-left: 15px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+
+.btn-all-reviews {
+    display: inline-block;
+    margin-top: 16.8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: rgb(240, 0, 0);
+    border-radius: 2px;
+    padding: 6px 30px;
+    text-align: center;
+    transition: 0.2s r;
+}
+
+.btn-all-reviews:hover {
+    transform: scale(1.1);
+    transition: 0.2s linear;
+    background-color: #A60000;
+    color: #fff;
+}
+
+.review-card {
+    background-color: rgba(83, 83, 83, 0.05);
+    width: 31%;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.review-card-body {
+    display: flex;
+}
+
+.review-rounded-bg {
+    background-color: rgb(240, 0, 0);
+    width: 29px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-rounded-bg p {
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.review-stars {
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.review-author-name {
+    padding-left: 0;
+}
+
+.review-author-name p {
+    color: #fff;
+    font-size: 1.1vw;
+    font-weight: 900;
+    margin: 0;
+}
+
+.date p {
+    font-weight: 900;
+    font-size: 0.8vw;
+    color: #738694;
+}
+
+.review-text {
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+#star {
+    fill: #F2B824;
+}
+
+.review-intro-text {
+    font-size: 45px;
+    color: red;
+    text-align: center;
+}
+
+.review-page-rows {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.basket-product-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid #000 !important;
+    padding: 12px 12px 12px 12px !important;
+    margin: 10px 0;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+    transition: 0.2s linear;
+}
+
+.basket-product-card:hover{
+    transform: scale(1.05);
+    transition: 0.2s linear;
+    background-color: rgb(24, 24, 24) !important;
+}
+
+.basket-product-card img {
+    width: 45px;
+}
+
+.basket-product-card h2 {
+    font-size: 18px;
+    color: red;
+}
+
+.basket-product-name {
+    display: block;
+    margin: auto 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.basket-product-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.basket-product-price p{
+    width: 55px;
+}
+
+.basket-product-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.basket-product-remove {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.basket-product-card p {
+    margin-bottom: 0;
+    padding-bottom: 7px;
+}
+
+.basket-product-name span {
+    color: red;
+    display: block;
+    text-align: center;
+}
+
+.basket-product-name p{
+}
+
+.basket-product-card p {
+    color: #fff;
+}
+
+.basket-product-image{
+    margin: auto;
+}
+
+.btn-cancel{
+    background-color: red;
+    outline: none;
+    border: none;
+    padding: 0px 7px;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.basket-product-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin: auto;
+}
+
+.empty-basket{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.empty-basket p{
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 80px;
+}
+
+.nav-order-container{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0px 12px;
+}
+
+.btn-order{
+    display: flex;
+    margin: auto;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: rgba(240, 0, 0, 0);
+    border: 2px solid red;
+    border-radius: 2px;
+    padding: 6px 0px;
+    text-align: center;
+    transition: 0.2s r;
+}
+
+.btn-order:hover{
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+/*Ordering page*/
+
+.order-container{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.order-row{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.order-row button{
+    display: block;
+    margin: 20px auto;
+}
+
+.order-col{
+    display: block;
+}
+
+.btn-finish-order{
+    margin: 0 auto;
+}
+
+/*End ordering page*/
+
+
+.circle{
+    width: 80px;
+    background-color: red;
+    border: 4px solid #b3b3b3;
+    border-radius: 50%;
+    height: 80px;
+}
+
+@media (max-width: 1199px) {
+    .navbar-container {
+        width: 90%;
+    }
+    .container-intro{
+        width: 90%;
+    }
+
+    .toggles {
+        width: 100%;
+    }
+    .menu {
+        width: 90%;
+    }
+
+    .line{
+        width: 90%;
+    }
+
+    .reviewList{
+        width: 90%;
+    }
+
+    .topbar-info time {
+        font-size: 12px;
+        margin: auto 10px;
+    }
+
+    .topbar-info a {
+        font-size: 12px;
+    }
+
+    .nav-icon {
+        padding: 7px;
+    }
+
+    .nav-icon-inst {
+        padding: 7px 8px;
+    }
+
+    .nav-dropdown-basket {
+        padding: 1px 15px !important;
+    }
+
+    .nav-dropdown-basket span {
+        margin: auto;
+        font-size: 12px !important;
+    }
+
+    .review-author-name p {
+        color: #fff;
+        font-size: 1.3vw;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    .date p {
+        font-weight: 900;
+        font-size: 1vw;
+        color: #738694;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .navbar-container {
+        width: 95%;
+    }
+
+    .topbar-info time {
+        font-size: 11px;
+    }
+
+    .topbar-info a {
+        font-size: 11px;
+    }
+
+    .review-card{
+        width: 40%;
+    }
+
+    .nav-icon {
+        padding: 5px;
+    }
+
+    .nav-icon-inst {
+        padding: 5px 6px;
+    }
+
+    .nav-dropdown-basket {
+        padding: 1px 15px !important;
+    }
+
+    .nav-icon-basket span {
+        font-size: 12px;
+    }
+
+    .review-author-name p {
+        color: #fff;
+        font-size: 1.4vw;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    .date p {
+        font-weight: 900;
+        font-size: 1.2vw;
+        color: #738694;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .navbar-container {
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-col-center {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-dropdown-basket {
+        padding: 2px 5px !important;
+    }
+
+    .nav-dropdown-basket span{
+        margin: auto;
+    }
+
+    .mainbar-row-right {
+        margin-left: 0;
+    }
+
+    .collapse-right {
+        padding: 10% 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .div-toggle-responsive {
+        margin: auto 0;
+        width: 10%;
+    }
+
+    .header-nav-link {
+        font-size: 20px;
+    }
+
+    .div-basket-md {
+        display: flex;
+        margin: auto 0;
+        color: #fff;
+        width: 10%;
+    }
+
+    .bro-logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .topbar-row-left, .topbar-row-right {
+        display: none;
+    }
+
+    .div-nav-adaptive {
+        display: flex;
+        margin: auto;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .review-card{
+        width: 47%;
+    }
+
+    .review-author-name p {
+        color: #fff;
+        font-size: 2.3vw;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    .date p {
+        font-weight: 900;
+        font-size: 1.4vw;
+        color: #738694;
+    }
+
+    .food-card{
+        width: 40%;
+    }
+}
+
+@media (max-width: 682px) {
+    .cards-row{
+        display: block;
+    }
+
+    .review-card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 442px) {
+    .container-intro{
+        display: block;
+    }
+
+    .food-card-body h3{
+        font-size: 30px;
+    }
+
+    .food-card-body p{
+        font-size: 14px;
+    }
+
+    .intro-text{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .intro-text h3{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .intro-image{
+        width: 80%;
+    }
+
+    .toggles{
+        width: 90%;
+    }
+
+    .btn-toggle{
+        font-size: 22px;
+    }
+
+    .div-toggle-responsive {
+        margin: auto 0;
+        width: 15%;
+    }
+
+    .div-basket-md {
+        display: flex;
+        margin: auto 0;
+        color: #fff;
+        width: 15%;
+    }
+
+    .div-basket-responsive {
+        display: flex;
+        margin: auto 0;
+        border-radius: 50%;
+    }
+
+    .basket-icon-adaptive {
+        display: flex;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    .basket-icon-adaptive p {
+        margin: auto;
+        padding: 3px 11px 3px 11px;
+        color: #fff;
+    }
+
+    .menu {
+        width: 90%;
+    }
+
+    .menu-items {
+        display: block;
+    }
+
+    .reviewList {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .reviewList h4{
+        font-size: 40px;
+    }
+
+    .food-card {
+        width: 90%;
+        margin: 20px auto 10px auto;
+    }
+
+    .btn-radio span {
+        font-size: 4.5vw;
+    }
+
+    .line{
+        width: 90%;
+    }
+}

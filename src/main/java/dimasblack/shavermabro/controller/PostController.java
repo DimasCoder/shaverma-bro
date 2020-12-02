@@ -1,6 +1,6 @@
 package dimasblack.shavermabro.controller;
 
-import dimasblack.shavermabro.dao.Post;
+import dimasblack.shavermabro.model.Post;
 import dimasblack.shavermabro.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

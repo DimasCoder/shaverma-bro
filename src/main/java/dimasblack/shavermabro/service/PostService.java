@@ -1,6 +1,6 @@
 package dimasblack.shavermabro.service;
 
-import dimasblack.shavermabro.dao.Post;
+import dimasblack.shavermabro.model.Post;
 import dimasblack.shavermabro.repo.PostRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

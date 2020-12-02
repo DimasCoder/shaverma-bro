@@ -1,6 +1,6 @@
 package dimasblack.shavermabro.repo;
 
-import dimasblack.shavermabro.dao.Order;
+import dimasblack.shavermabro.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
