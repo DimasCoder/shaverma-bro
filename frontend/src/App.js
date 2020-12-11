@@ -7,7 +7,6 @@ import Main from './pages/Main.js';
 import Delivery from './pages/Delivery.js';
 import Reviews from './pages/ReviewPage.js';
 import Faq from './pages/FAQ.js';
-import Cart from "./components/Cart";
 import Ordering from "./pages/Ordering";
 
 
@@ -19,28 +18,28 @@ class App extends React.Component {
         }
     }
 
-    addToCart = (shaverma, price, countOfOneProduct) => {
+    addToCart = (product, price, countOfOneProduct) => {
         const cartItems = this.state.cartItems.slice();
         let alreadyInCart = false;
         cartItems.forEach((item) => {
             console.log("price : " + price + "item.price : " + item.price)
-            if (item.id === shaverma.id && price == item.price) {
+            if (item.id === product.id && price == item.price) {
                 item.count++;
                 alreadyInCart = true
             }
         });
         if (!alreadyInCart) {
             countOfOneProduct = +countOfOneProduct
-            cartItems.push({...shaverma, count: 1, price, countOfOneProduct});
+            cartItems.push({...product, count: 1, price, countOfOneProduct});
         }
         this.setState({cartItems});
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }
 
-    removeFromCart = (shaverma) => {
+    removeFromCart = (product) => {
         const cartItems = this.state.cartItems.slice();
         cartItems.forEach((item) => {
-            if(shaverma.id === item.id && shaverma.price == item.price){
+            if(product.id === item.id && product.price == item.price){
                 console.log(item.id)
                 cartItems.splice(cartItems.indexOf(item), 1)
             }
@@ -52,17 +51,17 @@ class App extends React.Component {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     };
 
-    plus = (shaverma, count) => {
+    plus = (product, count) => {
         const cartItems = this.state.cartItems.slice()
-        shaverma.countOfOneProduct++;
+        product.countOfOneProduct++;
         this.setState({count: count + 1});
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     };
 
-    minus = (shaverma, count) => {
+    minus = (product, count) => {
         const cartItems = this.state.cartItems.slice()
-        if (shaverma.countOfOneProduct > 1) {
-            shaverma.countOfOneProduct--;
+        if (product.countOfOneProduct > 1) {
+            product.countOfOneProduct--;
             this.setState({count: count - 1});
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
         }

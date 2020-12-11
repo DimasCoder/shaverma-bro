@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom';
 import ReviewPage from "../pages/ReviewPage.js";
-import Card from "./Card.js";
+import ReviewCard from "./ReviewCard.js";
 import axios from "axios";
 
 
@@ -52,7 +52,7 @@ export default class Reviews extends Component {
                     <div>
                         <Row className="cards-row">
                             {limit.reverse().map((post, index) => (
-                                <Card post={post} index={index}/>
+                                <ReviewCard post={post} index={index}/>
                             ))}
                         </Row>
                     </div>

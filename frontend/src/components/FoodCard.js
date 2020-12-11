@@ -5,15 +5,15 @@ export default class FoodCard extends Component {
 
 
     state = {
-        shaverma: this.props.shaverma,
-        price: this.props.shaverma.priceMiddle,
-        image: this.props.shaverma.image,
-        name: this.props.shaverma.foodName,
-        category: this.props.shaverma.category,
-        recipe: this.props.shaverma.recipe,
-        priceMini: this.props.shaverma.priceMini,
-        priceMiddle: this.props.shaverma.priceMiddle,
-        priceMaxi: this.props.shaverma.priceMaxi,
+        product: this.props.product,
+        price: this.props.product.priceMiddle,
+        image: this.props.product.image,
+        name: this.props.product.foodName,
+        category: this.props.product.category,
+        recipe: this.props.product.recipe,
+        priceMini: this.props.product.priceMini,
+        priceMiddle: this.props.product.priceMiddle,
+        priceMaxi: this.props.product.priceMaxi,
         index: this.props.index,
         count: 1,
     }
@@ -46,7 +46,7 @@ export default class FoodCard extends Component {
         const {priceMiddle} = this.state;
         const {priceMaxi} = this.state;
         const {count} = this.state;
-        const {shaverma} = this.state;
+        const {product} = this.state;
         return (
             <div className="food-card">
                 <div className="product-img-div">
@@ -90,7 +90,7 @@ export default class FoodCard extends Component {
                                     +
                                 </button>
                             </div>
-                            <button type="button" onClick={() => this.props.addToCart(shaverma, price, count)}
+                            <button type="button" onClick={() => this.props.addToCart(product, price, count)}
                                     className="btn-wanted">Хочу!
                             </button>
                         </div>

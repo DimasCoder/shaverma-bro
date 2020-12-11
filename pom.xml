@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dimasblack</groupId>
-	<artifactId>shaverma-bro</artifactId>
+	<artifactId>product-bro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>shaverma-bro</name>
+	<name>product-bro</name>
 	<description>Shaverma Bro Back-end</description>
 
 	<properties>

@@ -265,7 +265,6 @@
 
 .intro-text {
     width: 50%;
-
 }
 
 .intro-text h3 {
@@ -278,18 +277,21 @@
 
 .intro-text span {
     color: red;
-    -webkit-text-stroke: 2px #000000;
-    text-shadow: 0 0 20px #000,
-    0 0 35px #000,
-    0 0 40px #000,
-    0 0 60px #000,
-    0 0 90px #000
+   
 }
 
 .intro-image {
     display: flex;
     margin: auto;
-    width: 40%;
+    width: 50%;
+
+}
+
+.carousel{
+    background-color: rgba(83, 83, 83, 0.05);
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 15px 15px rgba(0, 0, 0, 0.22);
 }
 
 .bro-img {
@@ -395,8 +397,10 @@
 }
 
 .food-card-body {
-    padding: 10px 20px 10px 20px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 10px 20px;
+
 }
 
 .food-card-body h3{
@@ -474,6 +478,7 @@ input[type=radio]:checked ~ span {
     width: 100%;
     display: flex;
     justify-content: space-between !important;
+    vertical-align:bottom; /* вот она */
 }
 
 .food-counter{
@@ -681,12 +686,14 @@ input[type=radio]:checked ~ span {
     color: #738694;
 }
 
+
 .review-text {
     color: #fff;
     margin-bottom: 0;
     margin-top: 10px;
     font-weight: 500;
     font-size: 14px;
+    display: flex;
 }
 
 
@@ -1097,6 +1104,7 @@ input[type=radio]:checked ~ span {
 @media (max-width: 442px) {
     .container-intro{
         display: block;
+        width: 90%;
     }
 
     .food-card-body h3{
@@ -1118,7 +1126,7 @@ input[type=radio]:checked ~ span {
     }
 
     .intro-image{
-        width: 80%;
+        width: 100%;
     }
 
     .toggles{

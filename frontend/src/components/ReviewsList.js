@@ -4,7 +4,7 @@ import {faFastBackward, faFastForward, faStepBackward, faStepForward} from '@for
 import {Button, FormControl, InputGroup, Row} from 'react-bootstrap';
 import "../App.css";
 import axios from "axios";
-import Card from "./Card"
+import ReviewCard from "./ReviewCard"
 
 export default class ReviewsList extends Component {
     constructor(props) {
@@ -85,7 +85,7 @@ export default class ReviewsList extends Component {
                 <div className="reviewList">
                     <Row className="cards-row">
                         {limit.reverse().map((post, index) => (
-                            <Card post={post} index={index}/>
+                            <ReviewCard post={post} index={index}/>
                         ))}
                     </Row>
                 </div>

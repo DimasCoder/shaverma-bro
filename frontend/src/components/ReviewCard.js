@@ -3,7 +3,7 @@ import "../App.css";
 import LStar from "./LightStar";
 import DStar from "./DarkStar";
 
-export default class Card extends Component {
+export default class ReviewCard extends Component {
     state = {
         firstName: this.props.post.firstName,
         secondName: this.props.post.secondName,

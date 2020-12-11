@@ -9,7 +9,7 @@ export default class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            shavermas: [],
+            products: [],
             price: ''
         };
     }
@@ -19,21 +19,21 @@ export default class Menu extends Component {
     }
 
     findAllPosts() {
-        axios.get("/api/shaverma/all")
+        axios.get("/api/product/all")
             .then(response => response.data)
             .then((data) => {
-                this.setState({shavermas: data})
+                this.setState({products: data})
             });
     }
 
     render() {
-        const {shavermas} = this.state;
+        const {products} = this.state;
         return (
             <div className="menu">
                 <Row className="menu-items">
-                    {shavermas.map((shaverma, index) => (
-                        shaverma.category === this.props.category &&
-                        <Card cartItems={this.props.cartItems} addToCart={this.props.addToCart} plus={this.props.plus} key={index} shaverma={shaverma}/>
+                    {products.map((product, index) => (
+                        product.category === this.props.category &&
+                        <Card cartItems={this.props.cartItems} addToCart={this.props.addToCart} plus={this.props.plus} key={index} product={product}/>
                     ))}
                 </Row>
                 <hr/>
