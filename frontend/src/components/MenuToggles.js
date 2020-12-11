@@ -12,7 +12,7 @@ class MenuToggles extends Component {
         let buttons = document.querySelectorAll("button");
         buttons.forEach(button => {
             button.addEventListener('click', function () {
-                buttons.forEach(btn => btn.classList.remove('active'))
+                buttons.forEach(btn => btn.classList.remove(' active'))
                 this.classList.add('active')
             })
         })
@@ -31,8 +31,7 @@ class MenuToggles extends Component {
                     </button>
                     <button type="button" className="btn-toggle" onClick={this.onClick} data-id="Бургер">Бургери
                     </button>
-                    <button type="button" className="btn-toggle"
-                            data-id="Напій">Напої
+                    <button type="button" className="btn-toggle" onClick={this.onClick} data-id="Напій">Напої
                     </button>
                 </div>
                 <Menu cartItems={this.props.cartItems} addToCart={this.props.addToCart} plus={this.props.plus}

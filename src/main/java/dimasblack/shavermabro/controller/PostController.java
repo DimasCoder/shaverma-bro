@@ -19,8 +19,8 @@ public class PostController {
     }
 
     @GetMapping("{id}")
-    public Post onePost(@PathVariable Long id){
-        return postService.findOnePost(id);
+    public Post onePost(@PathVariable("id") Post post){
+        return post;
     }
 
     @PostMapping
@@ -29,13 +29,13 @@ public class PostController {
     }
 
     @PutMapping("{id}")
-    public Post updatePost(@PathVariable("id") Post post){
-        return null;
+    public Post updatePost(@PathVariable("id") Post postFromDb, @RequestBody Post post){
+        return postService.updatePost(postFromDb, post);
     }
 
     @DeleteMapping("{id}")
-    public void deletePost(@PathVariable Long id){
-        postService.deletePost(id);
+    public void deletePost(@PathVariable("id") Post post){
+        postService.deletePost(post);
     }
 
 

@@ -2,6 +2,7 @@ package dimasblack.shavermabro.service;
 
 import dimasblack.shavermabro.model.Shaverma;
 import dimasblack.shavermabro.repo.ShavermaRepo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,16 +15,16 @@ public class ShavermaService {
         return shavermaRepo.findAll();
     }
 
-    public Shaverma findOneShaverma(Long id){
-        return shavermaRepo.getById(id);
-    }
-
-    public Shaverma createShaerma(Shaverma shaverma){
+    public Shaverma createShaverma(Shaverma shaverma){
         return shavermaRepo.save(shaverma);
     }
 
-    public void deleteShaverma(Long id){
-        Shaverma shaverma = findOneShaverma(id);
+    public Shaverma updateShaverma(Shaverma shavermaFromDb, Shaverma shaverma){
+        BeanUtils.copyProperties(shaverma, shavermaFromDb, "id");
+        return shaverma;
+    }
+
+    public void deleteShaverma(Shaverma shaverma){
         shavermaRepo.delete(shaverma);
     }
 }

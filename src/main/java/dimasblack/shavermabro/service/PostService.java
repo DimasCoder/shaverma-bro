@@ -2,6 +2,7 @@ package dimasblack.shavermabro.service;
 
 import dimasblack.shavermabro.model.Post;
 import dimasblack.shavermabro.repo.PostRepo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +18,6 @@ public class PostService {
         return postRepo.findAll();
     }
 
-    public Post findOnePost(Long id){
-        return postRepo.getById(id);
-    }
 
     public Post createPost(Post post){
         Date dateNow = new Date();
@@ -29,8 +27,14 @@ public class PostService {
         return postRepo.save(post);
     }
 
-    public void deletePost(Long id){
-        Post post = findOnePost(id);
+    public Post updatePost(Post postFromDb, Post post) {
+        BeanUtils.copyProperties(post, postFromDb, "id");
+        return post;
+    }
+
+    public void deletePost(Post post){
         postRepo.delete(post);
     }
+
+
 }
