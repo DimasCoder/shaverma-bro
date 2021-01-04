@@ -8,7 +8,9 @@ import logo from "../assets/logo1.png";
 import {NavLink} from 'react-router-dom';
 import Dropdown from "react-bootstrap/Dropdown";
 import BasketProductCard from "./BasketProductCard";
+import ReactGA from "react-ga";
 
+ReactGA.initialize('G-M4XGJJ7FF4');
 
 export default class Header extends Component {
 
