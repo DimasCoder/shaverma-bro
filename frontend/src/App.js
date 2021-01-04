@@ -8,7 +8,9 @@ import Delivery from './pages/Delivery.js';
 import Reviews from './pages/ReviewPage.js';
 import Faq from './pages/FAQ.js';
 import Ordering from "./pages/Ordering";
+import * as ReactGA from "react-ga";
 
+ReactGA.initialize('G-M4XGJJ7FF4');
 
 class App extends React.Component {
     constructor(props) {
@@ -16,6 +18,14 @@ class App extends React.Component {
         this.state = {
             cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []
         }
+    }
+
+    componentDidMount() {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
+    componentDidUpdate() {
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
 
