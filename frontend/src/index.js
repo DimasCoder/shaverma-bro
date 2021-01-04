@@ -14,7 +14,7 @@ const injectGA = () => {
     }
     gtag('js', new Date());
 
-    gtag('config', 'G-M4XGJJ7FF4');
+    gtag('config', 'UA-150128199-1');
 };
 
 ReactDOM.render(
@@ -22,7 +22,7 @@ ReactDOM.render(
   <React.StrictMode>
       <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"
+          src="https://www.googletagmanager.com/gtag/js?id=UA-150128199-1"
       />
       <script>{injectGA()}</script>
     <App />
