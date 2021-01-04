@@ -8,6 +8,7 @@ import Delivery from './pages/Delivery.js';
 import Reviews from './pages/ReviewPage.js';
 import Faq from './pages/FAQ.js';
 import Ordering from "./pages/Ordering";
+import ReactGA from "react-ga";
 
 
 class App extends React.Component {
@@ -17,6 +18,11 @@ class App extends React.Component {
             cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []
         }
     }
+
+    useEffect= () =>{
+        ReactGA.initialize('G-M4XGJJ7FF4');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    };
 
     addToCart = (product, price, countOfOneProduct) => {
         const cartItems = this.state.cartItems.slice();
