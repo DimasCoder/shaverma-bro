@@ -10,7 +10,7 @@ import Faq from './pages/FAQ.js';
 import Ordering from "./pages/Ordering";
 import * as ReactGA from "react-ga";
 
-ReactGA.initialize('G-M4XGJJ7FF4');
+ReactGA.initialize('UA-150128199-1');
 
 class App extends React.Component {
     constructor(props) {
@@ -20,13 +20,11 @@ class App extends React.Component {
         }
     }
 
-    componentDidMount() {
+    useEffect() {
         ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
-    componentDidUpdate() {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }
+
 
 
     addToCart = (product, price, countOfOneProduct) => {
