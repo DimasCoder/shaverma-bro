@@ -4,8 +4,27 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const injectGA = () => {
+    if (typeof window == 'undefined') {
+        return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-M4XGJJ7FF4');
+};
+
 ReactDOM.render(
+
   <React.StrictMode>
+      <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"
+      />
+      <script>{injectGA()}</script>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

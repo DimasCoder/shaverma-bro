@@ -25,4 +25,5 @@ public class HtmlPageController {
     public String ordering(){
         return "index.html";
     }
+    
 }
