@@ -38,17 +38,15 @@ export default class Reviews extends Component {
         return (
             <>
                 <div className="mt-5 reviewList">
-                    <Row className="reviews-text justify-content-between">
-                        <Col sm={10}>
+                    <div className="reviews-text">
+                        <div className="reviews-btn">
                             <h4><span>{count}</span> РЕАЛЬНИХ ВІДГУКІВ</h4>
-                        </Col>
-                        <Col>
-                            <NavLink exact to="/reviews" className="btn-all-reviews">ВСІ ВІДГУКИ <FontAwesomeIcon
+                            <NavLink exact to="/reviews" className="btn-all-reviews" >ВСІ ВІДГУКИ <FontAwesomeIcon
                                 icon={faArrowRight}/></NavLink>
-                        </Col>
+                        </div>
                         <p>Відгуки залишають лише реальні клієнти і лише після виконаного замовлення. Окрім
                             спама/реклами ніякі відгуки не редагуються і не видаляються.</p>
-                    </Row>
+                    </div>
                     <div>
                         <Row className="cards-row">
                             {limit.reverse().map((post, index) => (

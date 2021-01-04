@@ -23,18 +23,26 @@ export default class FoodCard extends Component {
     }
 
 
-    plus = () => {
+    increase = () => {
         this.setState({
             count: this.state.count + 1
         })
     };
 
-    minus = () => {
+    decrease = () => {
         if (this.state.count > 1)
             this.setState({
                 count: this.state.count - 1
             })
     };
+
+    setZero = () => {
+        this.setState({
+            count: 1
+        })
+    }
+
+
 
     render() {
         const {price} = this.state;
@@ -73,24 +81,26 @@ export default class FoodCard extends Component {
                                    checked={price == priceMiddle}/>
                             <span>Middle</span>
                         </label>
+                        {(priceMaxi !== 0) &&
                         <label className="btn-radio">
                             <input type="radio" value={priceMaxi} onChange={this.onChange}
                                    checked={price == priceMaxi}/>
                             <span>Maxi</span>
                         </label>
+                        }
                         <div className="food-card-footer">
                             <strong>{price}₴</strong>
                             <div className="food-counter">
-                                <button type="button" onClick={this.minus} className="btn-minus">
+                                <button type="button" onClick={this.decrease} className="btn-minus">
                                     -
                                 </button>
                                 <input type="text" min="1" value={count} className="btn-number"/>
                                 <button type="button" className="btn-plus"
-                                        onClick={this.plus}>
+                                        onClick={this.increase}>
                                     +
                                 </button>
                             </div>
-                            <button type="button" onClick={() => this.props.addToCart(product, price, count)}
+                            <button type="button" onClick={() => {this.props.addToCart(product, price, count); this.setZero()}}
                                     className="btn-wanted">Хочу!
                             </button>
                         </div>

@@ -11,7 +11,6 @@ class BasketProductCard extends Component {
     render() {
         const {count} = this.state
         const {item} = this.props
-        const {cartItems} = this.props
 
         return (
             <>

@@ -616,23 +616,30 @@ input[type=radio]:checked ~ span {
     padding-bottom: 15px;
 }
 
-.btn-all-reviews {
-    display: inline-block;
-    margin-top: 16.8px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    background-color: rgb(240, 0, 0);
-    border-radius: 2px;
-    padding: 6px 30px;
-    text-align: center;
-    transition: 0.2s r;
+.reviews-btn{
+    display: flex;
+    justify-content: space-between;
 }
 
-.btn-all-reviews:hover {
-    transform: scale(1.1);
+.btn-all-reviews{
+    color: #fff;
+    background-color: red;
+    border-radius: 2px;
+    margin-top: 16.8px;
+    margin-bottom: 16.8px;
+    padding: 6px 30px 6px 30px;
     transition: 0.2s linear;
-    background-color: #A60000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+.btn-all-reviews:hover {
+    transform: scale(1.05);
+    transition: 0.2s linear;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid red;
+    text-decoration: none;
     color: #fff;
 }
 
@@ -713,6 +720,8 @@ input[type=radio]:checked ~ span {
     margin: 0 auto;
 }
 
+/*Basket*/
+
 .basket-product-card {
     display: flex;
     width: 100%;
@@ -734,10 +743,6 @@ input[type=radio]:checked ~ span {
     width: 45px;
 }
 
-.basket-product-card h2 {
-    font-size: 18px;
-    color: red;
-}
 
 .basket-product-name {
     display: block;
@@ -958,6 +963,8 @@ input[type=radio]:checked ~ span {
 
 
 @media (max-width: 991px) {
+    .btn-all-reviews{
+    }
     .navbar-container {
         width: 95%;
     }
@@ -1181,7 +1188,13 @@ input[type=radio]:checked ~ span {
     }
 
     .reviewList h4{
-        font-size: 40px;
+        font-size: 33px;
+        padding-right: 0;
+    }
+
+    .btn-all-reviews{
+        margin-bottom: 10px;
+
     }
 
     .food-card {
@@ -1196,4 +1209,49 @@ input[type=radio]:checked ~ span {
     .line{
         width: 90%;
     }
+
+    .basket-product-card{
+        padding: 8px !important;
+    }
+
+    .basket-product-card img {
+        width: 40px;
+    }
+
+    .basket-product-image{
+        margin-right: 5px;
+    }
+
+    .basket-product-name p {
+        font-size: 14px;
+    }
+
+    .basket-product-name {
+        display: block;
+        margin: auto 5px;
+        text-align: center;
+        width: 20%;
+    }
+
+    .basket-product-price p{
+        width: 20px;
+        font-size: 14px;
+    }
+
+    .basket-product-remove {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 5px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .review-author-name p{
+        font-size: 16px;
+    }
+
+    .date p{
+        font-size: 12px;
+    }
+
 }
