@@ -14,6 +14,11 @@ ReactGA.initialize('G-M4XGJJ7FF4');
 
 export default class Header extends Component {
 
+    useEffect= () =>{
+        ReactGA.initialize('G-M4XGJJ7FF4');
+        ReactGA.pageview('/');
+    };
+
     render() {
         const {cartItems} = this.props
 
