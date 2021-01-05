@@ -708,17 +708,110 @@ input[type=radio]:checked ~ span {
     fill: #F2B824;
 }
 
-.review-intro-text {
+.review-intro-container{
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+.review-intro-container span{
+    width: 40%;
+
+}
+
+
+.review-intro-container h2{
     font-size: 45px;
     color: red;
     text-align: center;
+    width: 20%;
 }
+
+.review-intro-container *:last-child{
+    margin-left: auto;
+}
+
+.review-btn-post{
+    color: #fff;
+    background-color: red;
+    border-radius: 2px;
+    margin-top: 16.8px;
+    margin-bottom: 16.8px;
+    padding: 6px 30px 6px 30px;
+    transition: 0.2s linear;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+
+.review-btn-post:hover {
+    transform: scale(1.05);
+    transition: 0.2s linear;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid red;
+    text-decoration: none;
+    color: #fff;
+}
+
 
 .review-page-rows {
     width: 80%;
     display: block;
     margin: 0 auto;
 }
+
+.review-pagination{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.review-btn {
+    width: 140px;
+    background-color: rgba(0,0,0,0);
+    outline: none !important;
+    border: 2px solid red !important;
+    color: red;
+
+}
+
+.review-btn:active{
+    background-color: red;
+    transition: 0.1s linear;
+}
+
+.review-btn:disabled{
+    color: #7f1b15;
+}
+
+.first {
+    width: 40px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 15px 0 0 15px;
+    outline: none !important;
+    border-right: 0px solid red !important;
+    border-bottom: 2px solid red !important;
+    border-left: 2px solid red !important;
+    border-top: 2px solid red !important;
+    color: red;
+
+}
+
+.last {
+    width: 40px !important;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0 15px 15px 0 !important;
+    outline: none !important;
+    border-right: 2px solid red !important;
+    border-bottom: 2px solid red !important;
+    border-left: 0px solid red !important;
+    border-top: 2px solid red !important;
+    color: red;
+    transition: 0.1s linear;
+}
+
 
 /*Basket*/
 
@@ -959,6 +1052,10 @@ input[type=radio]:checked ~ span {
         font-size: 1vw;
         color: #738694;
     }
+
+    .review-intro-container{
+        width: 90%;
+    }
 }
 
 
@@ -1105,6 +1202,25 @@ input[type=radio]:checked ~ span {
 
     .review-card{
         width: 100%;
+    }
+    .review-intro-container{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+
+    .review-intro-container h2{
+        font-size: 45px;
+        color: red;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+
+    .review-intro-container *:last-child{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

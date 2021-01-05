@@ -12,7 +12,7 @@ export default class ReviewsList extends Component {
         this.state = {
             posts: [],
             currentPage: 1,
-            postsPerPage: 15
+            postsPerPage: 12
         };
     }
 
@@ -69,56 +69,46 @@ export default class ReviewsList extends Component {
     render() {
         const {posts, currentPage, postsPerPage, count} = this.state;
         const lastIndex = count - (currentPage - 1) * postsPerPage;
-        const firstIndex = lastIndex - postsPerPage;
-        const limit = posts.slice(firstIndex, lastIndex);
-        const totalPages = count / postsPerPage;
+        const firstIndex = (lastIndex < postsPerPage) ? 0 : lastIndex - postsPerPage;
+        const currentPosts = posts.slice(firstIndex, lastIndex);
+        const totalPages = Math.ceil(count / postsPerPage);
+        console.log("last index: " + lastIndex + "firstIndex: " + firstIndex + "currentPosts: " + posts.slice(firstIndex, lastIndex));
 
-        const pageNumCss = {
-            width: "45px",
-            border: "1px solid #17A2B8",
-            color: "#17A2B8",
-            textAlign: "center",
-            fontWeight: "bold"
-        };
+
         return (
             <>
                 <div className="reviewList">
                     <Row className="cards-row">
-                        {limit.reverse().map((post, index) => (
-                            <ReviewCard post={post} index={index}/>
+                        {currentPosts.reverse().map((post) => (
+                            <ReviewCard post={post} />
                         ))}
                     </Row>
                 </div>
-                <Row>
-                    <div className="pagination">
-                        <InputGroup size="sm">
-                            <InputGroup.Prepend>
-                                <Button type="button" variant="outline-info" disabled={currentPage === 1 ? true : false}
-                                        onClick={this.firstPage}>
-                                    <FontAwesomeIcon icon={faFastBackward}/>
-                                </Button>
-                                <Button type="button" variant="outline-info" disabled={currentPage === 1 ? true : false}
-                                        onClick={this.prevPage}>
-                                    <FontAwesomeIcon icon={faStepBackward}/> Пред
-                                </Button>
-                            </InputGroup.Prepend>
-                            <FormControl style={pageNumCss} className={"bg-dark"} name="currentPage" value={currentPage}
-                                         onChange={this.changePage}/>
-                            <InputGroup.Append>
-                                <Button type="button" variant="outline-info"
-                                        disabled={currentPage === totalPages ? true : false}
-                                        onClick={this.nextPage}>
-                                    <FontAwesomeIcon icon={faStepForward}/> След
-                                </Button>
-                                <Button type="button" variant="outline-info"
-                                        disabled={currentPage === totalPages ? true : false}
-                                        onClick={this.lastPage}>
-                                    <FontAwesomeIcon icon={faFastForward}/>
-                                </Button>
-                            </InputGroup.Append>
-                        </InputGroup>
+                    <div className="review-pagination">
+                        <button type="button" className="review-btn first"
+                                disabled={currentPage === 1}
+                                onClick={this.firstPage}>
+                            <FontAwesomeIcon  icon={faFastBackward}/>
+                        </button>
+                        <button type="button" className="review-btn prev"
+                                disabled={currentPage === 1}
+                                onClick={this.prevPage}>
+                            <FontAwesomeIcon icon={faStepBackward}/> Попередня
+                        </button>
+                        <input type="text" className="btn-number" value={currentPage}
+                               onChange={this.changePage}/>
+                        <button type="button" className="review-btn next"
+                                disabled={currentPage === totalPages}
+                                onClick={this.nextPage}>
+                            <FontAwesomeIcon icon={faStepForward}/> Наступна
+                        </button>
+                        <button type="button" className="review-btn last"
+                                disabled={currentPage === totalPages}
+                                onClick={this.lastPage}>
+                            <FontAwesomeIcon icon={faFastForward}/>
+                        </button>
+
                     </div>
-                </Row>
             </>
         )
     }
