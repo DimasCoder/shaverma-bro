@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import BasketProductCard from "../components/BasketProductCard";
 import axios from "axios";
 import Circle from "../components/Circle";
+import PageTitle from "../components/PageTitle";
 
 export default class Ordering extends Component {
 
@@ -25,7 +26,7 @@ export default class Ordering extends Component {
             alert("Корзина пуста!")
         } else {
             cartItems.forEach((item) => {
-                axios.post("https://shaverma-bro-backend.herokuapp.com/api/order/api/order", {
+                axios.post("api/order", {
                     firstName: this.state.firstName,
                     secondName: this.state.surName,
                     address: this.state.address,
@@ -55,6 +56,7 @@ export default class Ordering extends Component {
         const {firstName, surName, address, number, email} = this.state;
         return (
             <>
+                <PageTitle title={"Оформити замовлення"}/>
                 <div className="order-container">
                     <div className="order-row">
                         <Circle/>

@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import PageTitle from "../components/PageTitle";
 
 class Faq extends Component {
     render() {
         return (
-            <div>Faq</div>
+            <>
+                <PageTitle title={"Про нас"}/>
+            </>
         );
     }
 }

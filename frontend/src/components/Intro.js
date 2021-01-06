@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "../App.css";
-import bro from "../assets/bro3d.png";
 import Carousel from "react-bootstrap/Carousel";
 
 export default class Intro extends Component {

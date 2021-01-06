@@ -9,6 +9,7 @@ import Reviews from './pages/ReviewPage.js';
 import Faq from './pages/FAQ.js';
 import Ordering from "./pages/Ordering";
 import * as ReactGA from "react-ga";
+import PostPage from "./pages/ReviewFormPage";
 
 ReactGA.initialize('UA-150128199-1');
 
@@ -91,6 +92,8 @@ class App extends React.Component {
                         <Route exact path="/faq" component={Faq}/>
                         <Route exact path="/ordering" render={() => <Ordering cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} plus={this.plus}
                                                                               minus={this.minus}/>}/>
+                        <Route exact path="/post" component={PostPage}/>
+
                     </Switch>
                 </Router>
             </>

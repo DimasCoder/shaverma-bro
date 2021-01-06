@@ -55,6 +55,7 @@ export default class FoodCard extends Component {
         const {priceMaxi} = this.state;
         const {count} = this.state;
         const {product} = this.state;
+        console.log(price)
         return (
             <div className="food-card">
                 <div className="product-img-div">

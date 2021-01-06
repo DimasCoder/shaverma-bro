@@ -3,12 +3,11 @@ import Menu from './Menu.js'
 
 class MenuToggles extends Component {
     state = {
-        value: "Шаверма"
+        value: 'Шаверма'
     }
 
     onClick = e => {
         this.setState({value: e.currentTarget.dataset.id})
-        console.log(e.currentTarget.dataset.id)
         let buttons = document.querySelectorAll("button");
         buttons.forEach(button => {
             button.addEventListener('click', function () {

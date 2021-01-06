@@ -166,6 +166,19 @@
     color: #fff;
 }
 
+.active{
+    color: red !important;
+}
+
+.page-title{
+    font-size: 45px;
+    color: red;
+    text-align: center;
+    width: 40%;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
 
 .mainbar-row-left, .mainbar-row-right {
     width: 90%;
@@ -260,7 +273,7 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 .intro-text {
@@ -627,10 +640,12 @@ input[type=radio]:checked ~ span {
     border-radius: 2px;
     margin-top: 16.8px;
     margin-bottom: 16.8px;
-    padding: 6px 30px 6px 30px;
+    padding: 5px 29px 5px 29px;
     transition: 0.2s linear;
     font-weight: 600;
     font-size: 14px;
+    border: 2px solid red;
+
 }
 
 
@@ -640,7 +655,7 @@ input[type=radio]:checked ~ span {
     background-color: rgba(0,0,0,0);
     border: 2px solid red;
     text-decoration: none;
-    color: #fff;
+    color: red;
 }
 
 .review-card {
@@ -714,16 +729,13 @@ input[type=radio]:checked ~ span {
     margin: auto;
 }
 .review-intro-container span{
-    width: 40%;
+    width: 30%;
 
 }
 
 
 .review-intro-container h2{
-    font-size: 45px;
-    color: red;
-    text-align: center;
-    width: 20%;
+    margin: 0;
 }
 
 .review-intro-container *:last-child{
@@ -733,14 +745,15 @@ input[type=radio]:checked ~ span {
 .review-btn-post{
     color: #fff;
     background-color: red;
+    border: 2px solid red;
     border-radius: 2px;
     margin-top: 16.8px;
     margin-bottom: 16.8px;
     padding: 6px 30px 6px 30px;
-    transition: 0.2s linear;
     font-weight: 600;
     font-size: 14px;
-
+    transition: 0.2s linear;
+    text-decoration: none;
 }
 
 
@@ -750,7 +763,9 @@ input[type=radio]:checked ~ span {
     background-color: rgba(0,0,0,0);
     border: 2px solid red;
     text-decoration: none;
-    color: #fff;
+    color: red;
+    text-decoration: none;
+
 }
 
 
@@ -774,7 +789,14 @@ input[type=radio]:checked ~ span {
     outline: none !important;
     border: 2px solid red !important;
     color: red;
+    transition: 0.2s linear;
+}
 
+.review-btn:hover{
+    transition: 0.2s linear;
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
 }
 
 .review-btn:active{
@@ -784,6 +806,8 @@ input[type=radio]:checked ~ span {
 
 .review-btn:disabled{
     color: #7f1b15;
+    background-color: rgba(0,0,0,0);
+
 }
 
 .first {
@@ -981,6 +1005,125 @@ input[type=radio]:checked ~ span {
 }
 
 /*End ordering page*/
+
+
+/*Review form page*/
+
+.review-form-container{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.review-form-container p{
+    color: #fff;
+    margin: 0px 0px 5px 0px;
+}
+
+.review-form-container span{
+    color: red;
+}
+
+.review-form-border{
+    width: 50%;
+    background-color: rgba(83, 83, 83, 0.05);
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 20px 5px 10px 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: linear 0.2s;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.review-form-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-form-input{
+    background-color: #1b1e21;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    transition: 0.2s linear;
+
+}
+
+.review-form-input:focus{
+    border: 2px solid red;
+    transform: scale(1.02);
+    transition: 0.2s linear;
+}
+
+.review-form-text{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.review-form-text textarea{
+    width: 100%;
+    height: 140px;
+    resize: none;
+}
+
+.review-form-input:focus{
+    outline: none;
+}
+
+.star-rating{
+    margin-right: 8px;
+}
+
+input[type="radio"]:hover + .checkbox-image {
+    fill:#F2B824;
+}
+
+input[type="radio"]:checked + .checkbox-image {
+    fill:#F2B824;
+}
+
+.checkbox-input{
+    display: none;
+}
+
+.review-btn-send{
+    color: #fff;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 2px;
+    margin-top: 16.8px;
+    margin-bottom: 16.8px;
+    padding: 6px 30px 6px 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s linear;
+    text-decoration: none;
+}
+
+.review-btn-send a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.review-btn-send a:hover{
+    color: red;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.review-btn-send:hover {
+    transform: scale(1.05);
+    transition: 0.2s linear;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid red;
+    text-decoration: none;
+    color: red;
+}
+/*End review form page*/
 
 
 .circle{

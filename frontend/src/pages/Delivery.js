@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import PageTitle from "../components/PageTitle";
 
 class Delivery extends Component {
     render() {
         return (
-            <div>
-                delivery
-            </div>
+            <>
+                <PageTitle title={"Доставка"}/>
+
+            </>
         );
     }
 }

@@ -5,7 +5,7 @@ import {faBars, faClock, faPhone, faShoppingBasket} from '@fortawesome/free-soli
 import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 import {Nav, Navbar} from 'react-bootstrap';
 import logo from "../assets/logo1.png";
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import Dropdown from "react-bootstrap/Dropdown";
 import BasketProductCard from "./BasketProductCard";
 
@@ -88,9 +88,9 @@ export default class Header extends Component {
                                         <Dropdown.Divider/>
                                         {cartItems.length !== 0 &&
                                         <div className="nav-order-container">
-                                            <NavLink exact to="/ordering" className="btn-order">Оформити
+                                            <Link exact to="/ordering" className="btn-order">Оформити
                                                 замовлення <FontAwesomeIcon
-                                                    icon={faShoppingBasket}/></NavLink>
+                                                    icon={faShoppingBasket}/></Link>
                                         </div>
                                         }
                                     </Dropdown.Menu>
