@@ -25,5 +25,11 @@ public class HtmlPageController {
     public String ordering(){
         return "index.html";
     }
-    
+
+    @GetMapping("/post")
+    public String post(){
+        return "index.html";
+    }
+
+
 }
