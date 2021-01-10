@@ -67,7 +67,7 @@ export default class Header extends Component {
                                     <Dropdown.Toggle variant="danger" className="nav-dropdown-basket"
                                                      id="dropdown-basic">
                                         <FontAwesomeIcon icon={faShoppingBasket}/>
-                                        <span className=""> {cartItems.length === 0 ? 0 : cartItems.length}</span>
+                                        <span className=""> {cartItems.length === 0 ? 0 : cartItems.reduce((a, c) => a + c.countOfOneProduct, 0)}</span>
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu className="nav-dropdown-menu">

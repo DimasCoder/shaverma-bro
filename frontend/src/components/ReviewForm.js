@@ -104,7 +104,7 @@ class ReviewForm extends Component {
                         </div>
                         </div>
 
-                        <div className="order-row">
+                        <div className="review-btn-container">
                             <button type="submit" className="review-btn-send" onClick={this.postReview}><a
                                 href="/">Надіслати відгук</a></button>
                         </div>

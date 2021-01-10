@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Col, Row} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
-import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Link, NavLink, Route, Switch} from 'react-router-dom';
 import ReviewPage from "../pages/ReviewPage.js";
 import ReviewCard from "./ReviewCard.js";
 import axios from "axios";
@@ -41,11 +41,13 @@ export default class Reviews extends Component {
                     <div className="reviews-text">
                         <div className="reviews-btn">
                             <h4><span>{count}</span> РЕАЛЬНИХ ВІДГУКІВ</h4>
-                            <NavLink exact to="/reviews" className="btn-all-reviews" >ВСІ ВІДГУКИ <FontAwesomeIcon
-                                icon={faArrowRight}/></NavLink>
+                            <Link exact to="/reviews" className="btn-all-reviews" >Всі відгуки <FontAwesomeIcon
+                                icon={faArrowRight}/></Link>
                         </div>
+                        <div>
                         <p>Відгуки залишають лише реальні клієнти і лише після виконаного замовлення. Окрім
                             спама/реклами ніякі відгуки не редагуються і не видаляються.</p>
+                        </div>
                     </div>
                     <div>
                         <Row className="cards-row">
