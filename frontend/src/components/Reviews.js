@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {faArrowRight, faComment} from '@fortawesome/free-solid-svg-icons';
 import {BrowserRouter as Router, Link, NavLink, Route, Switch} from 'react-router-dom';
 import ReviewPage from "../pages/ReviewPage.js";
 import ReviewCard from "./ReviewCard.js";
 import axios from "axios";
+import RedButton from "./RedButton";
 
 
 export default class Reviews extends Component {
@@ -41,8 +42,7 @@ export default class Reviews extends Component {
                     <div className="reviews-text">
                         <div className="reviews-btn">
                             <h4><span>{count}</span> РЕАЛЬНИХ ВІДГУКІВ</h4>
-                            <Link exact to="/reviews" className="btn-all-reviews" >Всі відгуки <FontAwesomeIcon
-                                icon={faArrowRight}/></Link>
+                            <RedButton link={"/reviews"} text={"Всі відгуки"} icon={faArrowRight} />
                         </div>
                         <div>
                         <p>Відгуки залишають лише реальні клієнти і лише після виконаного замовлення. Окрім

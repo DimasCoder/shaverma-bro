@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import "../App.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBars, faClock, faPhone, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
+import {faBars, faClock, faComment, faPhone, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
 import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 import {Nav, Navbar} from 'react-bootstrap';
 import logo from "../assets/logo1.png";
 import {Link, NavLink} from 'react-router-dom';
 import Dropdown from "react-bootstrap/Dropdown";
 import BasketProductCard from "./BasketProductCard";
+import RedButton from "./RedButton";
 
 export default class Header extends Component {
 
@@ -88,9 +89,7 @@ export default class Header extends Component {
                                         <Dropdown.Divider/>
                                         {cartItems.length !== 0 &&
                                         <div className="nav-order-container">
-                                            <Link exact to="/ordering" className="btn-order">Оформити
-                                                замовлення <FontAwesomeIcon
-                                                    icon={faShoppingBasket}/></Link>
+                                            <RedButton link={"/ordering"} text={"Оформити замовлення"} icon={faShoppingBasket} />
                                         </div>
                                         }
                                     </Dropdown.Menu>
@@ -130,8 +129,7 @@ export default class Header extends Component {
                                             <Dropdown.Divider/>
                                             {cartItems.length !== 0 &&
                                             <div className="nav-order-container">
-                                                <NavLink exact to="/ordering" className="btn-order">Оформити
-                                                    замовлення</NavLink>
+                                                <RedButton link={"/ordering"} text={"Оформити замовлення"} icon={faShoppingBasket} />
                                             </div>
                                             }
                                         </Dropdown.Menu>

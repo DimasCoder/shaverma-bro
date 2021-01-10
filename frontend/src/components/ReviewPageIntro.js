@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faComment} from "@fortawesome/free-solid-svg-icons";
 import {Link} from 'react-router-dom';
 import PageTitle from "./PageTitle";
+import RedButton from "./RedButton";
 
 
 export default class ReviewPageIntro extends Component {
@@ -13,8 +14,7 @@ export default class ReviewPageIntro extends Component {
                 <div className="review-intro-container">
                     <span></span>
                     <PageTitle title={"Відгуки"}/>
-                    <Link exact to="/post" className="review-btn-post">Написати відгук <FontAwesomeIcon
-                        icon={faComment}/></Link>
+                    <RedButton link={"/post"} text={"Написати відгук"} icon={faComment} />
                 </div>
             </>
         )
