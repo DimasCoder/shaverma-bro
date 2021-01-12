@@ -31,5 +31,20 @@ public class HtmlPageController {
         return "index.html";
     }
 
+    @GetMapping("/cart")
+    public String cart(){
+        return "index.html";
+    }
+
+    @GetMapping("/checkout")
+    public String checkout(){
+        return "index.html";
+    }
+
+    @GetMapping("/complete")
+    public String complete(){
+        return "index.html";
+    }
+
 
 }

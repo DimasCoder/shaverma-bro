@@ -113,9 +113,6 @@ class App extends React.Component {
                         <Route exact path="/complete" component={CompleteOrder}/>
                         <Route exact path="/post" component={PostPage}/>
 
-                        <Route exact path="/ordering" render={() => <Ordering cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} plus={this.plus}
-                                                                              minus={this.minus}/>}/>
-
                     </Switch>
                 </Router>
             </>
