@@ -12,7 +12,6 @@ import * as ReactGA from "react-ga";
 import PostPage from "./pages/ReviewFormPage";
 import Checkout from "./pages/Checkout";
 import CompleteOrder from "./pages/CompleteOrder";
-import Ordering from "./pages/Ordering";
 
 ReactGA.initialize('UA-150128199-1');
 
