@@ -7,7 +7,7 @@ class RedButton extends Component {
     render() {
         return (
             <>
-                <Link exact to={this.props.link} className="btn-red">{this.props.text} &nbsp;<FontAwesomeIcon
+                <Link exact to={this.props.link} onClick={this.props.click} className="btn-red">{this.props.text} &nbsp;<FontAwesomeIcon
                     icon={this.props.icon}/></Link>
             </>
         );

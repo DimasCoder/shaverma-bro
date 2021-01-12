@@ -15,6 +15,13 @@
     font-style: normal;
 }
 
+.base-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
 /*Header*/
 .navbar .navbar .navbar-expand-md .navbar-light {
     padding: 0;
@@ -978,12 +985,14 @@ input[type=radio]:checked ~ span {
     color: #fff;
 }
 
-/*Ordering page*/
+/*CartPage page*/
 
 .order-container{
     width: 80%;
-    display: block;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .order-row{
@@ -1018,9 +1027,9 @@ input[type=radio]:checked ~ span {
 }
 
 .review-form-container p{
-    color: #fff;
-    margin: 0px 0px 5px 0px;
-}
+     color: #fff;
+     margin: 0px 0px 5px 0px;
+ }
 
 .review-form-container span{
     color: red;
@@ -1098,6 +1107,9 @@ input[type="radio"]:checked + .checkbox-image {
     justify-content: center;
 }
 
+.review-btn-container a{
+}
+
 .review-btn-send{
     color: #fff;
     background-color: red;
@@ -1105,7 +1117,7 @@ input[type="radio"]:checked + .checkbox-image {
     border-radius: 2px;
     margin-top: 16.8px;
     margin-bottom: 16.8px;
-    padding: 6px 30px 6px 30px;
+    padding: 6px 30px 6px 20px;
     font-weight: 600;
     font-size: 14px;
     transition: 0.2s linear;
@@ -1118,7 +1130,7 @@ input[type="radio"]:checked + .checkbox-image {
     transition: 0.2s linear;
 }
 
-.review-btn-send a:hover{
+.review-btn-send:hover a{
     color: red;
     text-decoration: none;
     transition: 0.2s linear;
@@ -1135,13 +1147,110 @@ input[type="radio"]:checked + .checkbox-image {
 /*End review form page*/
 
 
-.circle{
+.progress-circle{
     width: 80px;
-    background-color: red;
+    height: 80px;
+    background-color: inherit;
     border: 4px solid #b3b3b3;
     border-radius: 50%;
-    height: 80px;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
+
+.progress-circle-active{
+    background-color: red;
+}
+
+.progress-line{
+    width: 15%;
+    height: 10px;
+    background-color: #b3b3b3;
+    margin: auto 4px;
+    border: 2px solid #b3b3b3;
+}
+
+.progress-line-active{
+    background-color: red;
+}
+
+
+.ordering-progress-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.nav-dropdown-thead-left{
+    display: flex;
+    width: 51%;
+    justify-content: space-between;
+}
+
+.nav-dropdown-thead-right{
+    display: flex;
+    width: 34%;
+    justify-content: space-between;
+}
+
+/*Checkout*/
+
+.checkout-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data-form{
+    width: 50%;
+}
+
+.check{
+    width: 35%;
+    border: 2px solid red;
+    border-radius: 15px;
+}
+
+.order-form-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.order-form-border{
+    width: 100%;
+    background-color: rgba(83, 83, 83, 0.05);
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 20px 5px 10px 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: linear 0.2s;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.order-form-border p{
+    color: #fff;
+    margin: 0px 0px 5px 0px;
+}
+
+.order-btn-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*End checkout*/
 
 @media (max-width: 1199px) {
     .navbar-container {
@@ -1399,38 +1508,38 @@ input[type="radio"]:checked + .checkbox-image {
 }
 
 @media (max-width: 442px) {
-    .container-intro{
+    .container-intro {
         display: block;
         width: 90%;
     }
 
-    .food-card-body h3{
+    .food-card-body h3 {
         font-size: 30px;
     }
 
-    .food-card-body p{
+    .food-card-body p {
         font-size: 14px;
     }
 
-    .intro-text{
+    .intro-text {
         width: 80%;
         margin: 0 auto;
     }
 
-    .intro-text h3{
+    .intro-text h3 {
         font-size: 35px;
         text-align: center;
     }
 
-    .intro-image{
+    .intro-image {
         width: 100%;
     }
 
-    .toggles{
+    .toggles {
         width: 90%;
     }
 
-    .btn-toggle{
+    .btn-toggle {
         font-size: 22px;
     }
 
@@ -1464,6 +1573,18 @@ input[type="radio"]:checked + .checkbox-image {
         color: #fff;
     }
 
+    .nav-dropdown-thead-left {
+        display: flex;
+        width: 48%;
+        justify-content: space-between;
+    }
+
+    .nav-dropdown-thead-right {
+        display: flex;
+        width: 39%;
+        justify-content: space-between;
+    }
+
     .menu {
         width: 90%;
     }
@@ -1477,17 +1598,17 @@ input[type="radio"]:checked + .checkbox-image {
         margin: 0 auto;
     }
 
-    .reviewList h4{
+    .reviewList h4 {
         font-size: 33px;
         padding-right: 0;
     }
 
-    .reviews-btn{
+    .reviews-btn {
         display: flex;
         flex-direction: column;
     }
 
-    .btn-all-reviews{
+    .btn-all-reviews {
         margin-bottom: 10px;
 
     }
@@ -1501,11 +1622,11 @@ input[type="radio"]:checked + .checkbox-image {
         font-size: 4.5vw;
     }
 
-    .line{
+    .line {
         width: 90%;
     }
 
-    .basket-product-card{
+    .basket-product-card {
         padding: 8px !important;
     }
 
@@ -1513,7 +1634,7 @@ input[type="radio"]:checked + .checkbox-image {
         width: 40px;
     }
 
-    .basket-product-image{
+    .basket-product-image {
         margin-right: 5px;
     }
 
@@ -1528,7 +1649,7 @@ input[type="radio"]:checked + .checkbox-image {
         width: 20%;
     }
 
-    .basket-product-price p{
+    .basket-product-price p {
         width: 20px;
         font-size: 14px;
     }
@@ -1541,39 +1662,63 @@ input[type="radio"]:checked + .checkbox-image {
         text-align: center;
     }
 
-    .review-author-name p{
+    .review-author-name p {
         font-size: 16px;
     }
 
-    .date p{
+    .date p {
         font-size: 12px;
     }
 
-    .review-form-container{
+    .review-form-container {
         width: 100%;
     }
 
-    .review-form-border{
+    .review-form-border {
         width: 90%;
     }
-    .review-form-input-container{
+
+    .review-form-input-container {
         display: flex;
         height: 150px;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .review-form-input{
+    .review-form-input {
         width: 100%;
     }
 
-    .review-btn-send{
-        padding: 6px 50px 6px 50px;
+    .review-btn-send {
+        padding: 6px 30px 6px 30px;
 
     }
 
-    .page-title{
+    .page-title {
         width: 60%;
     }
 
+    .progress-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .checkout-container{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .data-form{
+        width: 100%;
+    }
+
+    .check{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .order-form-input-container {
+        flex-direction: column;
+
+    }
 }

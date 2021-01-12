@@ -73,8 +73,14 @@ export default class Header extends Component {
 
                                     <Dropdown.Menu className="nav-dropdown-menu">
                                         <Dropdown.Header className="nav-dropdown-header">
-                                            <p>Кошик</p>
-                                            <p>{cartItems.reduce((a, c) => a + c.price * c.countOfOneProduct, 0)}.00₴</p>
+                                            <div className="nav-dropdown-thead-left">
+                                                <p>Товар</p>
+                                                <p>Ціна</p>
+                                            </div>
+                                            <div className="nav-dropdown-thead-right">
+                                                <p>Кількість</p>
+                                                <p>{cartItems.reduce((a, c) => a + c.price * c.countOfOneProduct, 0)}.00₴</p>
+                                            </div>
                                         </Dropdown.Header>
                                         {cartItems.length === 0 ?
                                             <div className="empty-basket">
@@ -89,7 +95,7 @@ export default class Header extends Component {
                                         <Dropdown.Divider/>
                                         {cartItems.length !== 0 &&
                                         <div className="nav-order-container">
-                                            <RedButton link={"/ordering"} text={"Оформити замовлення"} icon={faShoppingBasket} />
+                                            <RedButton link={"/cart"} text={"Оформити замовлення"} icon={faShoppingBasket} />
                                         </div>
                                         }
                                     </Dropdown.Menu>
@@ -114,8 +120,14 @@ export default class Header extends Component {
 
                                         <Dropdown.Menu className="nav-dropdown-menu">
                                             <Dropdown.Header className="nav-dropdown-header">
-                                                <p>Кошик</p>
+                                                <div className="nav-dropdown-thead-left">
+                                                <p>Товар</p>
+                                                <p>Ціна</p>
+                                                </div>
+                                                <div className="nav-dropdown-thead-right">
+                                                <p>Кількість</p>
                                                 <p>{cartItems.reduce((a, c) => a + c.price * c.countOfOneProduct, 0)}.00₴</p>
+                                                </div>
                                             </Dropdown.Header>
                                             {cartItems.length === 0 ?
                                                 <div className="empty-basket">
@@ -129,7 +141,7 @@ export default class Header extends Component {
                                             <Dropdown.Divider/>
                                             {cartItems.length !== 0 &&
                                             <div className="nav-order-container">
-                                                <RedButton link={"/ordering"} text={"Оформити замовлення"} icon={faShoppingBasket} />
+                                                <RedButton link={"/cart"} text={"Оформити замовлення"} icon={faShoppingBasket} />
                                             </div>
                                             }
                                         </Dropdown.Menu>

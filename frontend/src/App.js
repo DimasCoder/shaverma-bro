@@ -7,9 +7,12 @@ import Main from './pages/Main.js';
 import Delivery from './pages/Delivery.js';
 import Reviews from './pages/ReviewPage.js';
 import Faq from './pages/FAQ.js';
-import Ordering from "./pages/Ordering";
+import CartPage from "./pages/CartPage";
 import * as ReactGA from "react-ga";
 import PostPage from "./pages/ReviewFormPage";
+import Checkout from "./pages/Checkout";
+import CompleteOrder from "./pages/CompleteOrder";
+import Ordering from "./pages/Ordering";
 
 ReactGA.initialize('UA-150128199-1');
 
@@ -44,21 +47,35 @@ class App extends React.Component {
         }
         this.setState({cartItems});
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        console.log(cartItems.length)
     }
 
     removeFromCart = (product) => {
         const cartItems = this.state.cartItems.slice();
-        cartItems.forEach((item) => {
-            if(product.id === item.id && product.price == item.price){
-                console.log(item.id)
-                cartItems.splice(cartItems.indexOf(item), 1)
-            }
-        })
-        this.setState({cartItems})
-        /*this.setState({
-            cartItems: cartItems.filter((x) => x.id === shaverma.id && shaverma.price != x.price),
-        });*/
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        if(cartItems.length !== 1){
+            cartItems.forEach((item) => {
+                if(product.id === item.id && product.price == item.price){
+                    console.log(item.id)
+                    cartItems.splice(cartItems.indexOf(item), 1)
+                }
+            })
+            this.setState({cartItems})
+            /*this.setState({
+                cartItems: cartItems.filter((x) => x.id === shaverma.id && shaverma.price != x.price),
+            });*/
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        }else if(cartItems.length === 1){
+            cartItems.forEach((item) => {
+                if(product.id === item.id && product.price == item.price){
+                    console.log(item.id)
+                    cartItems.splice(cartItems.indexOf(item), 1)
+                }
+            })
+            localStorage.clear()
+            this.setState({cartItems})
+
+        }
+
     };
 
     plus = (product, count) => {
@@ -90,9 +107,14 @@ class App extends React.Component {
                         <Route exact path="/delivery" component={Delivery}/>
                         <Route exact path="/reviews" component={Reviews}/>
                         <Route exact path="/faq" component={Faq}/>
+                        <Route exact path="/cart" render={() => <CartPage cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} plus={this.plus}
+                                                                              minus={this.minus}/>}/>
+                        <Route exact path="/checkout" render={() => <Checkout cartItems={this.state.cartItems}/>}/>
+                        <Route exact path="/complete" component={CompleteOrder}/>
+                        <Route exact path="/post" component={PostPage}/>
+
                         <Route exact path="/ordering" render={() => <Ordering cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} plus={this.plus}
                                                                               minus={this.minus}/>}/>
-                        <Route exact path="/post" component={PostPage}/>
 
                     </Switch>
                 </Router>

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import BasketProductCard from "../components/BasketProductCard";
 import axios from "axios";
-import Circle from "../components/Circle";
 import PageTitle from "../components/PageTitle";
 
 export default class Ordering extends Component {
@@ -59,9 +58,6 @@ export default class Ordering extends Component {
                 <PageTitle title={"Оформити замовлення"}/>
                 <div className="order-container">
                     <div className="order-row">
-                        <Circle/>
-                        <Circle/>
-                        <Circle/>
                         <div className="order-col">
                             <p>Ім'я</p>
                             <input required={true} type="input" value={firstName} name="firstName"
