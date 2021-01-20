@@ -108,7 +108,7 @@
 }
 
 .navbar-collapse{
-    flex-grow: unset;
+    flex-grow: inherit;
     align-items: normal!important;
 }
 
@@ -1340,10 +1340,7 @@ input[type="radio"]:checked + .checkbox-image {
         width: 50%;
     }
 
-    .navbar-collapse{
-        flex-grow: unset !important;
-        align-items: normal!important;
-    }
+
     .toggles {
         width: 100%;
     }
