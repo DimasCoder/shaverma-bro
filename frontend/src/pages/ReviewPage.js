@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Intro from "../components/ReviewPageIntro";
-import Reviews from "../components/ReviewsList";
+import Intro from "../components/reviews/ReviewPageIntro";
+import Reviews from "../components/reviews/ReviewsList";
 
 
 export default class ReviewPage extends Component {

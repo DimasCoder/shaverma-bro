@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "../App.css";
 import Intro from "../components/Intro";
-import Reviews from "../components/Reviews";
+import Reviews from "../components/reviews/Reviews";
 import Menu from "../components/MenuToggles.js";
 
 

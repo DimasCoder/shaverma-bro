@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BasketProductCard from "../components/BasketProductCard";
+import BasketProductCard from "../components/header/BasketProductCard";
 import axios from "axios";
 import ProgressCircle from "../components/ProgressCircle";
 import PageTitle from "../components/PageTitle";

@@ -3,10 +3,10 @@ import {Col, Row} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight, faComment} from '@fortawesome/free-solid-svg-icons';
 import {BrowserRouter as Router, Link, NavLink, Route, Switch} from 'react-router-dom';
-import ReviewPage from "../pages/ReviewPage.js";
+import ReviewPage from "../../pages/ReviewPage.js";
 import ReviewCard from "./ReviewCard.js";
 import axios from "axios";
-import RedButton from "./RedButton";
+import RedButton from "../RedButton";
 
 
 export default class Reviews extends Component {

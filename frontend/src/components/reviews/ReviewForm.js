@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
+import Input from "../Input";
 
 class ReviewForm extends Component {
 
@@ -24,10 +25,11 @@ class ReviewForm extends Component {
         })
     }
 
-    inputChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
+    inputChange(e) {
+        const { name, value } = e.target;
+
+        this.setState({ [name]: value })
+
     }
 
     handleCheckboxChange = event =>{

@@ -22,15 +22,100 @@
     flex-direction: row;
 }
 
-/*Header*/
-.navbar .navbar .navbar-expand-md .navbar-light {
-    padding: 0;
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.navbar-container {
-    width: 80%;
-    margin: 0 auto;
+/*Header*/
+.nav-bar{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 4px !important;
+    width: 80% !important;
+    margin: auto !important;
+    display: flex !important;
+}
+
+.nav-bar-center{
+    width: 40%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-bar-brand{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+.nav-brand-logo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.nav-bar-side{
+    width: 32%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: top;
+}
+
+.nav-bar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.nav-bar-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-info time {
+    color: #fff;
+    font-size: 14px;
+    margin: auto 10px auto 5px;
+}
+
+.nav-bar-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: auto 10px auto 5px;
+    transition: 0.2s linear;
+}
+
+.nav-bar-info a:hover {
+    color: rgb(240, 0, 0);
+    text-decoration: none;
+    margin: auto 10px auto 5px;
+}
+
+.nav-bar-info span {
+    color: rgb(240, 0, 0);
+}
+
+.navbar-collapse{
+    flex-grow: unset;
+    align-items: normal!important;
+}
+
+
+
+.nav-bar-mobile-cart{
+    display: none;
 }
 
 .nav-col {
@@ -41,6 +126,12 @@
 .nav-col-center {
     display: flex;
     width: 20%;
+}
+
+.nav-dropdown-basket span{
+    font-weight: 600;
+    font-family: 'Segoe UI', arial;
+    font-size: 14px;
 }
 
 .topbar-row-left {
@@ -64,19 +155,6 @@
     display: flex;
 }
 
-.topbar-info time {
-    font-size: 14px;
-    margin: auto 10px auto 5px;
-}
-
-.topbar-info a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    margin: auto 10px auto 5px;
-    transition: 0.2s linear;
-}
-
 .topbar-info a:hover {
     color: rgb(240, 0, 0);
     text-decoration: none;
@@ -87,22 +165,22 @@
     color: rgb(240, 0, 0);
 }
 
-.nav-icon {
+.circle-icon {
     text-decoration: none;
     color: #fff;
-    background-color: rgb(240, 0, 0);
+    background-color: rgb(240,0,0);
     border-radius: 50%;
     padding: 9px;
     text-align: center;
-    line-height: 0px;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: .2s linear;
 }
 
-.nav-icon:hover {
-    text-decoration: none;
-    color: #fff;
+.circle-icon:hover {
     transform: scale(1.1);
+    transition: .2s linear;
 }
 
 .nav-icon-inst {
@@ -110,7 +188,8 @@
     color: #fff;
     background-color: rgb(240, 0, 0);
     border-radius: 50%;
-    padding: 0.563em 0.625em 0.563em 0.625em;
+    font-size: 10px ;
+    padding: 10px 13px;
     text-align: center;
     line-height: 0px;
     vertical-align: middle;
@@ -217,13 +296,6 @@
     width: 85%;
     display: flex;
     justify-content: space-between;
-}
-
-.bro-logo {
-    width: 84%;
-    height: auto;
-    display: flex;
-    margin: 0 auto;
 }
 
 .div-basket-md {
@@ -1117,7 +1189,7 @@ input[type="radio"]:checked + .checkbox-image {
     border-radius: 2px;
     margin-top: 16.8px;
     margin-bottom: 16.8px;
-    padding: 6px 30px 6px 20px;
+    padding: 6px 30px 6px 30px;
     font-weight: 600;
     font-size: 14px;
     transition: 0.2s linear;
@@ -1253,13 +1325,20 @@ input[type="radio"]:checked + .checkbox-image {
 /*End checkout*/
 
 @media (max-width: 1199px) {
-    .navbar-container {
-        width: 90%;
+    .nav-bar {
+        width: 90% !important;
     }
     .container-intro{
         width: 90%;
     }
 
+    .nav-bar-center{
+        width: 30%;
+    }
+
+    .nav-bar-brand{
+        width: 50%;
+    }
     .toggles {
         width: 100%;
     }
@@ -1275,6 +1354,10 @@ input[type="radio"]:checked + .checkbox-image {
         width: 90%;
     }
 
+    .nav-bar-side{
+        height: 90px;
+    }
+
     .topbar-info time {
         font-size: 12px;
         margin: auto 10px;
@@ -1284,7 +1367,7 @@ input[type="radio"]:checked + .checkbox-image {
         font-size: 12px;
     }
 
-    .nav-icon {
+    .circle-icon {
         padding: 7px;
     }
 
@@ -1323,15 +1406,15 @@ input[type="radio"]:checked + .checkbox-image {
 @media (max-width: 991px) {
     .btn-all-reviews{
     }
-    .navbar-container {
-        width: 95%;
+    .nav-bar {
+        width: 90% !important;
     }
 
-    .topbar-info time {
+    .nav-bar-info time {
         font-size: 11px;
     }
 
-    .topbar-info a {
+    .nav-bar-info a {
         font-size: 11px;
     }
 
@@ -1339,7 +1422,7 @@ input[type="radio"]:checked + .checkbox-image {
         width: 40%;
     }
 
-    .nav-icon {
+    .circle-icon {
         padding: 5px;
     }
 
@@ -1376,10 +1459,42 @@ input[type="radio"]:checked + .checkbox-image {
 
 
 @media (max-width: 767px) {
-    .navbar-container {
-        width: 95%;
-        margin: 0 auto;
+    .nav-bar {
+        width: 95%!important;
+        margin: 0 auto !important;
         display: block;
+    }
+    .nav-bar-links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-bar-center{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px auto;
+    }
+
+    .nav-bar-brand{
+        width: 15%;
+    }
+
+    .nav-bar-mobile-cart{
+        margin: auto 0;
+    }
+
+    .nav-bar-side{
+        height: auto;
+    }
+
+    .nav-bar-mobile-cart{
+        display: flex;
+    }
+
+    .responsive-span{
+        display: none;
     }
 
     .nav-col-center {
@@ -1399,6 +1514,15 @@ input[type="radio"]:checked + .checkbox-image {
     .mainbar-row-right {
         margin-left: 0;
     }
+
+    .nav-bar-info{
+        display: none;
+    }
+
+    .right{
+        display: none;
+    }
+
 
     .collapse-right {
         padding: 10% 0;
@@ -1475,6 +1599,9 @@ input[type="radio"]:checked + .checkbox-image {
 }
 
 @media (max-width: 682px) {
+    .nav-bar-brand{
+        width: 20%;
+    }
     .cards-row{
         display: block;
     }
@@ -1508,6 +1635,9 @@ input[type="radio"]:checked + .checkbox-image {
 }
 
 @media (max-width: 442px) {
+    .nav-bar-brand{
+        width: 25%;
+    }
     .container-intro {
         display: block;
         width: 90%;

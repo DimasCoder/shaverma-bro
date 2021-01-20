@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReviewForm from "../components/ReviewForm";
+import ReviewForm from "../components/reviews/ReviewForm";
 import PageTitle from "../components/PageTitle";
 
 class ReviewFormPage extends Component {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import "../App.css";
-import LStar from "./LightStar";
-import DStar from "./DarkStar";
+import "../../App.css";
+import LStar from "../LightStar";
+import DStar from "../DarkStar";
 
 export default class ReviewCard extends Component {
 
