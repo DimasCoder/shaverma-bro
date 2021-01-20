@@ -108,7 +108,7 @@
 }
 
 .navbar-collapse{
-    flex-grow: inherit;
+    flex-grow: 3;
     align-items: normal!important;
 }
 
