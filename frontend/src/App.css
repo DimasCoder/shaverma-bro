@@ -22,6 +22,16 @@
     flex-direction: row;
 }
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mainnn{
+    flex: 1 0 auto;
+}
+
 .right{
     display: flex;
     flex-direction: row;
@@ -1095,7 +1105,7 @@ input[type=radio]:checked ~ span {
 .review-form-container{
     width: 80%;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 120px auto;
 }
 
 .review-form-container p{
@@ -1112,10 +1122,9 @@ input[type=radio]:checked ~ span {
     background-color: rgba(83, 83, 83, 0.05);
     border: 2px solid black;
     border-radius: 3px;
-    margin: 20px 5px 10px 5px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: linear 0.2s;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -1322,7 +1331,129 @@ input[type="radio"]:checked + .checkbox-image {
 }
 
 
-/*End checkout*/
+
+
+
+/*Footer*/
+
+.footer{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -14px 28px rgba(0, 0, 0, 0.25), 0 -10px 10px rgba(0, 0, 0, 0.22);
+    flex: 0 0 auto;
+}
+
+.footer-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0 0 15px 0;
+    justify-content: space-between;
+    border-bottom: 2px solid red;
+}
+
+.footer-logo-container {
+    width: 30%;
+    display: flex;
+    margin: auto 0;
+}
+
+.footer-logo{
+    margin: 20px 0;
+    width: 35%;
+}
+
+.footer-instagram-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.instagram-card{
+    display: flex;
+    flex-direction: row;
+}
+
+.instagram-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.instagram-info span{
+    color: red;
+}
+
+.instagram-info p{
+    color: #fff;
+    margin-bottom: 0px;
+}
+.instagram-icon{
+    margin: 5px 5px 0px 0px;
+}
+
+.insta-icon{
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+}
+
+.instagram-icon svg{
+    width: 16px !important;
+}
+
+.footer-info-container {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto 0;
+    color: #fff;
+
+}
+
+.social-icons p{
+    margin: auto 10px auto 0;
+}
+
+.social-icons svg{
+    width: 16px !important;
+
+}
+
+.footer-privacy{
+    display: flex;
+    margin: 10px auto;
+}
+
+.footer-privacy p{
+    color: #fff;
+    margin: auto;
+}
+
+.footer-privacy span{
+    color: red;
+}
+
+/*End footer*/
+
+.map-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
 
 @media (max-width: 1199px) {
     .nav-bar {
@@ -1851,6 +1982,37 @@ input[type="radio"]:checked + .checkbox-image {
 
     .order-form-input-container {
         flex-direction: column;
+    }
 
+    .footer-container{
+        flex-direction: column;
+    }
+
+    /*footer*/
+
+    .footer-container{
+        width: 90%;
+    }
+
+    .footer-logo-container{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-instagram-container{
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .footer-info-container{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    .social-icons p{
+        font-size: 11px;
     }
 }

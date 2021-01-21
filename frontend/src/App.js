@@ -12,6 +12,7 @@ import * as ReactGA from "react-ga";
 import PostPage from "./pages/ReviewFormPage";
 import Checkout from "./pages/Checkout";
 import CompleteOrder from "./pages/CompleteOrder";
+import Footer from "./components/footer/Footer";
 
 ReactGA.initialize('UA-150128199-1');
 
@@ -97,8 +98,10 @@ class App extends React.Component {
         return (
             <>
                 <Router>
+                    <div className="main-container">
                     <Header cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} plus={this.plus}
                             minus={this.minus}/>
+                            <div className="mainnn">
                     <Switch>
                         <Route exact path="/"
                                render={() => <Main cartItems={this.state.cartItems} addToCart={this.addToCart}
@@ -113,6 +116,9 @@ class App extends React.Component {
                         <Route exact path="/post" component={PostPage}/>
 
                     </Switch>
+                            </div>
+                    <Footer/>
+                    </div>
                 </Router>
             </>
         );
