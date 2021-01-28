@@ -8,9 +8,9 @@ class FooterInfo extends Component {
     render() {
         return (
             <div className="footer-info-container">
-                <FooterSocialIcon icon={faInstagram} text={"Instagram"}/>
-                <FooterSocialIcon icon={faFacebookSquare} text={"Facebook"}/>
-                <FooterSocialIcon icon={faMapMarkedAlt} text={"вул.Гагаріна, NOVUS"}/>
+                <FooterSocialIcon url={"https://www.instagram.com/shaverma_bro_rivne/"} icon={faInstagram} text={"Instagram"}/>
+                <FooterSocialIcon url={"https://www.facebook.com/Shaverma.BRO.rivne/"} icon={faFacebookSquare} text={"Facebook"}/>
+                <FooterSocialIcon url={"https://twitter.com/Dimas_Quadro"} icon={faMapMarkedAlt} text={"вул.Гагаріна, NOVUS"}/>
             </div>
         );
     }

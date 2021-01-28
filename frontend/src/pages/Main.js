@@ -11,9 +11,9 @@ export default class Main extends Component {
         return (
             <>
                 <MetaTags>
-                    <title>Shaverma Bro - найсмачніша шаверма в чорному лаваші</title>
+                    <title>Шаверма Бро - найсмачніша шаверма в Рівному</title>
                     <meta id="meta-description" name="description" content="Shaverma Bro - переходь на темну сторону. Ви можете скуштувати смачну шаверму в чорному лаваші лише в нас." />
-                    <meta id="og-title" property="og:title" content="Shaverma Bro головна сторінка." />
+                    <meta id="og-title" property="og:title" content="Шаверма Бро | Shaverma BRO" />
                 </MetaTags>
                 <Intro/>
                 <Menu cartItems={this.props.cartItems} addToCart={this.props.addToCart} plus={this.props.plus} />

@@ -10,9 +10,9 @@ class Faq extends Component {
         return (
             <>
                 <MetaTags>
-                    <title>Shaverma Bro - про нас та наш заклад</title>
+                    <title>Шаверма Бро - про нас та наш заклад</title>
                     <meta id="meta-description" name="description" content="Shaverma Bro - це мережа закладів швидкого харчування в місті Рівне, що працює ради вашого задоволення." />
-                    <meta id="og-title" property="og:title" content="Shaverma Bro про нас." />
+                    <meta id="og-title" property="og:title" content="Шаверма Бро | Про Шаверму Бро | Shaverma BRO." />
                 </MetaTags>
                 <PageTitle title={"Про нас"}/>
             </>

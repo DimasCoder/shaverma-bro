@@ -5,12 +5,12 @@ import {faInstagram} from "@fortawesome/free-brands-svg-icons";
 class FooterSocialIcon extends Component {
     render() {
         return (
-            <div className="social-icons">
+            <a href={this.props.url} className="social-icons">
                 <p>{this.props.text}</p>
                 <div className="circle-icon insta-icon">
                     <FontAwesomeIcon icon={this.props.icon}/>
                 </div>
-            </div>
+            </a>
         );
     }
 }

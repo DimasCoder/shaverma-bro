@@ -9,10 +9,10 @@ export default class ReviewPage extends Component {
         return (
             <>
                 <MetaTags>
-                    <title>Shaverma Bro - відгуки наших клієнтів</title>
+                    <title>Шаверма Бро - ввідгуки наших клієнтів</title>
                     <meta id="meta-description" name="description" content="Відгуки залишають лише реальні клієнти і лише після виконаного замовлення. Окрім
                             спама/реклами ніякі відгуки не редагуються і не видаляються." />
-                    <meta id="og-title" property="og:title" content="Shaverma Bro відгуки." />
+                    <meta id="og-title" property="og:title" content="Шаверма Бро | Відгуки про Шаверму Бро | Shaverma BRO" />
                 </MetaTags>
                 <Intro/>
                 <Reviews/>

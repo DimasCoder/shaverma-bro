@@ -10,9 +10,9 @@ class Delivery extends Component {
         return (
             <>
                 <MetaTags>
-                    <title>Shaverma Bro - доставка по місту Рівне</title>
+                    <title>Шаверма Бро - доставка по місту Рівне</title>
                     <meta id="meta-description" name="description" content="Доставка на Shaverma Bro. Замовити доставку від Shaverma Bro. Доставка здійснюється по всьому місту Рівне." />
-                    <meta id="og-title" property="og:title" content="Shaverma Bro доставка." />
+                    <meta id="og-title" property="og:title" content="Шаверма Бро | Доставка від Шаверма Бро | Shaverma BRO" />
                 </MetaTags>
                 <PageTitle title={"Доставка"}/>
             </>
