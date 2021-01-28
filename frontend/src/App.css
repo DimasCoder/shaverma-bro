@@ -369,7 +369,7 @@
     width: 50%;
 }
 
-.intro-text h3 {
+.intro-text h1 {
     padding: 10% 0;
     color: #fff;
     font-weight: 900;
@@ -1357,26 +1357,29 @@ input[type="radio"]:checked + .checkbox-image {
 }
 
 .footer-logo-container {
-    width: 30%;
+    width: 20%;
     display: flex;
     margin: auto 0;
+    border-right: 2px solid red;
 }
 
 .footer-logo{
     margin: 20px 0;
-    width: 35%;
+    width: 60%;
 }
 
 .footer-instagram-container{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .instagram-card{
+    width: 70%;
     display: flex;
     flex-direction: row;
+    margin: auto;
 }
 
 .instagram-info{
@@ -1412,6 +1415,7 @@ input[type="radio"]:checked + .checkbox-image {
     flex-direction: column;
     margin: 0 auto;
     justify-content: space-around;
+    border-left: 2px solid red;
 }
 
 .social-icons{

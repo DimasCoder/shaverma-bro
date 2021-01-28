@@ -3,7 +3,9 @@ import ReviewForm from "../components/reviews/ReviewForm";
 import PageTitle from "../components/PageTitle";
 
 class ReviewFormPage extends Component {
-
+    componentDidMount() {
+        document.title = 'Залишити відгук'
+    }
 
     render() {
         return (

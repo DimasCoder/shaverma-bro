@@ -8,6 +8,7 @@ class FooterLogo extends Component {
                 <img
                     className="footer-logo"
                 src={logo}
+                    alt={"footer logo"}
                 />
             </div>
         );

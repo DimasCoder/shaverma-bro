@@ -18,7 +18,7 @@ class NavbarCenter extends Component {
                     <img
                         src={logo}
                         className="nav-brand-logo"
-                        alt="Logo"
+                        alt="Shaverma Bro logo"
                     />
                 </Navbar.Brand>
                 <div className="nav-bar-mobile-cart">

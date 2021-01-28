@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import BasketProductCard from "../components/header/BasketProductCard";
-import axios from "axios";
-import ProgressCircle from "../components/ProgressCircle";
 import PageTitle from "../components/PageTitle";
 import OrderProgress from "../components/OrderProgress";
 import RedButton from "../components/RedButton";
@@ -21,11 +19,15 @@ export default class CartPage extends Component {
         }
     }
 
+    componentDidMount() {
+        document.title = 'Корзина'
+    }
+
     render() {
         const {cartItems} = this.props;
         return (
             <>
-                <PageTitle title={"Оформити замовлення"}/>
+                <PageTitle title={"Кошик"}/>
                 <OrderProgress first={"true"}/>
                 <div className="order-container">
                     <div className="">

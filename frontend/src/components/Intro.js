@@ -10,7 +10,7 @@ export default class Intro extends Component {
             <>
                 <div className="container-intro">
                     <div className="intro-text">
-                        <h3><span>Shaverma BRO</span> Обери свою чорну насолоду!</h3>
+                        <h1><span>Shaverma BRO</span> Обери свою чорну насолоду!</h1>
                     </div>
                     <div className="intro-image">
                         <Carousel className="carousel">

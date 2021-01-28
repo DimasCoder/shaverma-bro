@@ -62,7 +62,7 @@ export default class FoodCard extends Component {
                     <img
                         src={image}
                         className="d-inline-block product-img"
-                        alt="shaverma"
+                        alt="shaverma-product"
                     />
                 </div>
                 <div className="food-card-body">

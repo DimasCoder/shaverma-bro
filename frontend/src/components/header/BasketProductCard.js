@@ -18,6 +18,7 @@ class BasketProductCard extends Component {
                     <div className="basket-product-image">
                         <img
                             src={item.image}
+                            alt="Shaverma Product"
                         />
                     </div>
                     <div className="basket-product-name">
