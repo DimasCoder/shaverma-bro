@@ -17,7 +17,7 @@ export default class Intro extends Component {
                             <Carousel.Item interval={300}>
                                 <img
                                     className="d-block w-100"
-                                    src="https://i.ibb.co/GJzhZWT/IMG-20201029-204108.jpg"
+                                    src="https://www.zdorovieinfo.ru/wp-content/uploads/2019/09/shutterstock_1122622892.jpg"
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
